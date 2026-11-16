@@ -62,3 +62,27 @@
         padding: 10px 16px;
     }
 }
+
+/* RAPHA Labs Footer Logo - Size Fix */
+
+.footer .brand-logo {
+    display: block;
+    width: 150px;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 12px;
+}
+
+.footer .brand {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+    .footer .brand-logo {
+        width: 120px;
+    }
+}
