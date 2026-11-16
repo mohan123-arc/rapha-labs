@@ -3,28 +3,55 @@
 @media(max-width:650px){.nav{border-radius:22px;align-items:flex-start;flex-wrap:wrap}.menu-toggle{display:block}.nav nav{display:none;width:100%;flex-direction:column;align-items:stretch;padding:10px}.nav nav.open{display:flex}.nav nav a{padding:8px}.hero{grid-template-columns:1fr;padding-top:65px;min-height:auto}.hero h1{font-size:45px}.hero-visual{min-height:290px}.section{padding-top:70px}.about-grid,.service-grid,.team-grid{grid-template-columns:1fr}.about-card:last-child{grid-column:auto}.service-card{padding:24px}.project-card{padding:25px;flex-direction:column;align-items:flex-start}.project-mark{width:90px;height:90px;font-size:55px;border-radius:25px}.steps{grid-template-columns:repeat(2,1fr)}.step{padding:13px 7px}.enquiry-form{padding:20px}.form-grid{grid-template-columns:1fr}.form-grid .full{grid-column:auto}.contact-card{grid-template-columns:1fr;padding:25px}.footer{margin-top:55px}.footer p{width:100%;order:3}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 
-/* RAPHA Labs Official Logo */
+
+/* RAPHA Labs Header Logo - Fixed Size */
 
 .brand {
     display: inline-flex;
     align-items: center;
+    flex-shrink: 0;
     text-decoration: none;
 }
 
 .brand-logo {
     display: block;
-    width: 190px;
-    height: auto;
+    width: 64px !important;
+    height: 64px !important;
+    max-width: 64px;
+    max-height: 64px;
     object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 12px;
     transition: transform 0.3s ease;
 }
 
 .brand-logo:hover {
-    transform: scale(1.03);
+    transform: scale(1.04);
+}
+
+/* Mobile Header */
+@media (max-width: 600px) {
+    .brand-logo {
+        width: 52px !important;
+        height: 52px !important;
+        max-width: 52px;
+        max-height: 52px;
+    }
+}
+
+/* Header alignment */
+
+header.nav.glass {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 88px;
+    padding: 12px 24px;
 }
 
 @media (max-width: 600px) {
-    .brand-logo {
-        width: 145px;
+    header.nav.glass {
+        min-height: 72px;
+        padding: 10px 16px;
     }
 }
